@@ -1,558 +1,200 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kelpify Agri Solutions — Regenerating soil. Naturally.</title>
-<link rel="icon" type="image/png" href="assets/kelpify-logo.png">
-<meta name="description" content="Kelpify Agri Solutions is transforming agriculture for Indian farmers. Launching soon.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --paper: #FAFBF8;
-    --paper-shade: #F0F3EC;
-    --ink: #1C2622;
-    --ink-soft: #4A574F;
-    --leaf-1: #8FCB4E;
-    --leaf-2: #2E8F4E;
-    --water-1: #2E96D6;
-    --water-2: #0B3F73;
-    --teal: #1D6E5C;
-  }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kelpify Agri Solutions — Coming Soon</title>
+  <meta name="description" content="Kelpify Agri Solutions — Regenerating soil, naturally.">
 
-  *{ box-sizing:border-box; margin:0; padding:0; }
-  html{ scroll-behavior:smooth; }
+  <link rel="icon" type="image/png" href="assets/logo.png">
+  <link rel="stylesheet" href="style.css">
 
-  body{
-    background:var(--paper);
-    color:var(--ink);
-    font-family:'Inter', sans-serif;
-    line-height:1.55;
-    overflow-x:hidden;
-  }
-
-  h1, h2, .display{
-    font-family:'Poppins', sans-serif;
-    font-weight:700;
-    letter-spacing:-0.01em;
-  }
-
-  a{ color:inherit; }
-
-  :focus-visible{
-    outline:3px solid var(--water-1);
-    outline-offset:3px;
-  }
-
-  /* ---------- NAV ---------- */
-
-  .nav{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    gap:14px;
-    padding: 32px clamp(20px, 6vw, 64px) 0;
-    position:relative;
-    z-index:5;
-  }
-
-  .nav .eyebrow-tag{
-    position:static;
-  }
-
-  .brand{
-    display:flex;
-    align-items:center;
-    gap:12px;
-  }
-
-  .brand img{
-    height:130px;
-    width:auto;
-    object-fit:contain;
-    display:block;
-  }
-
-  .brand-name{
-    font-family:'Poppins', sans-serif;
-    font-weight:800;
-    font-size:1.15rem;
-    color:var(--ink);
-    line-height:1.1;
-  }
-
-  .brand-name small{
-    display:block;
-    font-family:'Inter', sans-serif;
-    font-weight:500;
-    font-size:0.62rem;
-    letter-spacing:0.14em;
-    text-transform:uppercase;
-    color:var(--teal);
-    margin-top:2px;
-  }
-
-  .eyebrow-tag{
-    border:1px solid rgba(28,38,34,0.18);
-    border-radius:999px;
-    padding:7px 16px;
-    font-size:0.76rem;
-    font-weight:600;
-    letter-spacing:0.08em;
-    text-transform:uppercase;
-    color:var(--teal);
-    background:rgba(46,143,78,0.06);
-  }
-
-  /* ---------- HERO ---------- */
-
-  .hero{
-    position:relative;
-    padding: clamp(48px, 9vw, 96px) clamp(20px, 6vw, 64px) 0;
-    max-width:1180px;
-    margin:0 auto;
-  }
-
-  .hero-wave-bg{
-    position:absolute;
-    top:-10%;
-    right:-15%;
-    width:60vw;
-    max-width:720px;
-    opacity:0.55;
-    z-index:0;
-    pointer-events:none;
-  }
-
-  .hero-inner{
-    position:relative;
-    z-index:2;
-    max-width:760px;
-    padding-top:36px;
-    margin-left:auto;
-    margin-right:auto;
-    text-align:center;
-  }
-
-  .hero-hindi{
-    font-size:0.95rem;
-    color:var(--ink-soft);
-    margin-bottom:10px;
-    font-weight:500;
-    text-align:center;
-  }
-
-  .hero-headline{
-    font-size:clamp(2.4rem, 6vw, 4.4rem);
-    line-height:1.08;
-    color:var(--ink);
-    text-align:center;
-  }
-
-  .grad-text{
-    background:linear-gradient(100deg, var(--leaf-2) 0%, var(--water-1) 100%);
-    -webkit-background-clip:text;
-    background-clip:text;
-    color:transparent;
-  }
-
-  .hero-sub{
-    margin-top:22px;
-    font-size:clamp(1rem, 1.6vw, 1.2rem);
-    max-width:52ch;
-    margin-left:auto;
-    margin-right:auto;
-    color:var(--ink-soft);
-  }
-
-  .signup{
-    margin-top:34px;
-    display:flex;
-    justify-content:center;
-    gap:10px;
-    flex-wrap:wrap;
-    max-width:480px;
-    margin-left:auto;
-    margin-right:auto;
-  }
-
-  .signup input[type="email"]{
-    flex:1 1 240px;
-    padding:15px 18px;
-    border-radius:10px;
-    border:1.5px solid rgba(28,38,34,0.16);
-    background:#FFFFFF;
-    color:var(--ink);
-    font-family:'Inter', sans-serif;
-    font-size:1rem;
-  }
-
-  .signup input[type="email"]::placeholder{ color:#8A9690; }
-
-  .signup button{
-    padding:15px 28px;
-    border-radius:10px;
-    border:none;
-    background:linear-gradient(100deg, var(--leaf-2) 0%, var(--water-2) 100%);
-    color:#fff;
-    font-family:'Inter', sans-serif;
-    font-weight:600;
-    font-size:1rem;
-    cursor:pointer;
-    transition:transform 0.15s ease, box-shadow 0.15s ease;
-    box-shadow: 0 6px 18px rgba(11,63,115,0.18);
-  }
-
-  .signup button:hover{ transform:translateY(-1px); box-shadow: 0 8px 22px rgba(11,63,115,0.26); }
-
-  .form-note{
-    margin-top:10px;
-    font-size:0.82rem;
-    color:#8A9690;
-  }
-
-  .hero-divider{
-    margin-top:clamp(56px, 8vw, 88px);
-    width:100%;
-    display:block;
-  }
-
-  /* ---------- ROWS SECTION ---------- */
-
-  .rows-section{
-    background:var(--paper-shade);
-    padding: clamp(56px, 9vw, 100px) clamp(20px, 6vw, 64px);
-  }
-
-  .rows-head{
-    max-width:640px;
-    margin:0 auto 52px;
-  }
-
-  .rows-head .eyebrow-tag{
-    display:inline-block;
-    margin-bottom:16px;
-  }
-
-  .rows-head h2{
-    font-size:clamp(1.8rem, 4vw, 2.4rem);
-    color:var(--ink);
-  }
-
-  .rows-head p{
-    margin-top:14px;
-    color:var(--ink-soft);
-    max-width:56ch;
-  }
-
-  .rows-grid{
-    max-width:1080px;
-    margin:0 auto;
-    display:grid;
-    grid-template-columns:repeat(3, 1fr);
-    gap:20px;
-  }
-
-  .row-card{
-    background:#fff;
-    border-radius:18px;
-    padding:32px 26px;
-    border:1px solid rgba(28,38,34,0.06);
-    box-shadow: 0 10px 30px rgba(28,38,34,0.04);
-  }
-
-  .row-card .icon{
-    width:48px; height:48px;
-    border-radius:12px;
-    display:flex; align-items:center; justify-content:center;
-    margin-bottom:18px;
-  }
-
-  .row-card:nth-child(1) .icon{ background:rgba(46,143,78,0.12); }
-  .row-card:nth-child(2) .icon{ background:rgba(46,150,214,0.12); }
-  .row-card:nth-child(3) .icon{ background:rgba(29,110,92,0.12); }
-
-  .row-card h3{
-    font-family:'Poppins', sans-serif;
-    font-weight:600;
-    font-size:1.15rem;
-    margin-bottom:8px;
-    color:var(--ink);
-  }
-
-  .row-card p{
-    color:var(--ink-soft);
-    font-size:0.96rem;
-  }
-
-  @media (max-width:820px){
-    .rows-grid{ grid-template-columns:1fr; }
-  }
-
-  /* ---------- FOOTER ---------- */
-
-  .footer{
-    background:var(--ink);
-    color:#DCE6DF;
-    padding: clamp(48px, 8vw, 76px) clamp(20px, 6vw, 64px) 32px;
-  }
-
-  .footer-top{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    text-align:center;
-    gap:24px;
-    padding-bottom:32px;
-    border-bottom:1px solid rgba(220,230,223,0.14);
-    max-width:1180px;
-    margin:0 auto;
-  }
-
-  .footer-top h2{
-    font-size:clamp(1.5rem, 3.2vw, 2.1rem);
-    color:#fff;
-    max-width:16ch;
-  }
-
-  .footer-top .grad-text{
-    background:linear-gradient(100deg, var(--leaf-1) 0%, var(--water-1) 100%);
-    -webkit-background-clip:text;
-    background-clip:text;
-    color:transparent;
-  }
-
-  .footer .signup input[type="email"]{
-    background:rgba(255,255,255,0.06);
-    border-color:rgba(220,230,223,0.2);
-    color:#fff;
-  }
-  .footer .signup input[type="email"]::placeholder{ color:rgba(220,230,223,0.5); }
-
-  .footer-bottom{
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    gap:16px;
-    padding-top:24px;
-    font-size:0.85rem;
-    color:rgba(220,230,223,0.5);
-    max-width:1180px;
-    margin:0 auto;
-  }
-
-  .footer-bottom .brand{ opacity:1; }
-  .footer-bottom .brand img{
-    height:70px;
-    width:auto;
-    background:#FAFBF8;
-    border-radius:10px;
-    padding:6px 10px;
-  }
-
-  @media (prefers-reduced-motion: reduce){
-    html{ scroll-behavior:auto; }
-  }
-
-  /* ---------- RESPONSIVE POLISH ---------- */
-  .footer-bottom{
-    max-width:1180px;
-    margin:28px auto 0;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:20px;
-    flex-wrap:wrap;
-  }
-
-  @media (max-width: 640px){
-    .nav{ padding-top:22px; gap:10px; }
-    .brand img{ height:96px; }
-    .hero{ padding-top:34px; }
-    .hero-inner{ padding-top:18px; }
-    .hero-headline{ font-size:clamp(2.25rem, 12vw, 3.4rem); }
-    .hero-sub{ font-size:0.98rem; }
-    .signup{ width:100%; }
-    .signup input[type="email"],
-    .signup button{ width:100%; flex-basis:100%; }
-    .rows-head{ margin-bottom:34px; }
-    .footer-bottom{ flex-direction:column; text-align:center; }
-  }
-
-  @media (prefers-reduced-motion: reduce){
-    html{ scroll-behavior:auto; }
-    *, *::before, *::after{
-      animation-duration:0.01ms !important;
-      animation-iteration-count:1 !important;
-      transition-duration:0.01ms !important;
-    }
-  }
-
-</style>
+  <!-- Web3Forms hCaptcha -->
+  <script src="https://web3forms.com/client/script.js" async defer></script>
 </head>
 <body>
 
-<section class="hero">
-  <svg class="hero-wave-bg" viewBox="0 0 500 500" fill="none" aria-hidden="true">
-    <path d="M60 260 C 140 220, 220 220, 260 180 C 300 140, 300 80, 260 40" stroke="url(#leafGrad)" stroke-width="10" stroke-linecap="round" fill="none" opacity="0.5"/>
-    <path d="M40 300 C 160 260, 260 340, 380 290 C 440 265, 460 300, 480 280" stroke="url(#waterGrad)" stroke-width="10" stroke-linecap="round" fill="none" opacity="0.4"/>
-    <path d="M20 360 C 150 320, 270 400, 400 350 C 450 330, 470 360, 495 345" stroke="url(#waterGrad2)" stroke-width="8" stroke-linecap="round" fill="none" opacity="0.3"/>
-    <defs>
-      <linearGradient id="leafGrad" x1="0" y1="0" x2="1" y2="1">
-        <stop offset="0%" stop-color="#8FCB4E"/>
-        <stop offset="100%" stop-color="#2E8F4E"/>
-      </linearGradient>
-      <linearGradient id="waterGrad" x1="0" y1="0" x2="1" y2="0">
-        <stop offset="0%" stop-color="#2E96D6"/>
-        <stop offset="100%" stop-color="#0B3F73"/>
-      </linearGradient>
-      <linearGradient id="waterGrad2" x1="0" y1="0" x2="1" y2="0">
-        <stop offset="0%" stop-color="#0B3F73"/>
-        <stop offset="100%" stop-color="#2E96D6"/>
-      </linearGradient>
-    </defs>
-  </svg>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
 
-  <nav class="nav">
-    <div class="brand">
-      <img src="assets/kelpify-logo.png" alt="Kelpify Agri Solutions logo">
+  <main class="page">
+
+    <header class="brand">
+      <img src="assets/logo.png" alt="Kelpify Agri Solutions">
+    </header>
+
+    <section class="hero">
+      <span class="eyebrow">COMING SOON</span>
+
+      <p class="hindi">मिट्टी की नई शुरुआत — जल्द आ रहे हैं</p>
+
+      <h1>
+        Regenerating soil,<br>
+        <em>naturally.</em>
+      </h1>
+
+      <p class="intro">
+        We’re building a better way to restore soil health with
+        nature-inspired agricultural solutions.
+      </p>
+
+      <form id="notifyForm" class="notify-form">
+        <input type="hidden" name="access_key" value="60b2cc7e-95ca-4caf-a449-bd62f727fa9e">
+        <input type="hidden" name="subject" value="New Kelpify Coming Soon Signup">
+        <input type="hidden" name="from_name" value="Kelpify Coming Soon Page">
+
+        <div class="input-row">
+          <input
+            id="email"
+            name="email"
+            type="email"
+            placeholder="Enter your email address"
+            autocomplete="email"
+            required
+          >
+          <button id="submitButton" type="submit">Notify me</button>
+        </div>
+
+        <div class="h-captcha" data-captcha="true"></div>
+
+        <div id="response" class="response" aria-live="polite"></div>
+
+        <div id="successCard" class="success-card" aria-live="polite">
+          <strong>You're on the list ✓</strong>
+          <span id="successEmail"></span>
+        </div>
+      </form>
+    </section>
+
+    <div class="wave-wrap" aria-hidden="true">
+      <svg viewBox="0 0 1440 180" preserveAspectRatio="none">
+        <path d="M0,85 C180,155 310,155 490,82 C675,7 795,5 980,78 C1160,150 1285,153 1440,88 L1440,180 L0,180 Z"></path>
+      </svg>
     </div>
-    <div class="eyebrow-tag">Coming soon</div>
-  </nav>
 
-  <div class="hero-inner">
-    <div class="hero-hindi">मिट्टी की नई शुरुआत — जल्द आ रहे हैं</div>
-    <h1 class="hero-headline">Regenerating <span class="grad-text"> soil</span>, naturally.</h1>
-    <p class="hero-sub">We're transforming agriculture for farmers. Something new is on the way — leave your email and be the first to know when we launch.</p>
-
-    <form class="signup" onsubmit="handleSignup(event)">
-      <label for="email" style="position:absolute;left:-9999px;">Email address</label>
-      <input id="email" name="email" type="email" placeholder="you@example.com" required>
-      <input type="hidden" name="access_key" value="60b2cc7e-95ca-4caf-a449-bd62f727fa9e">
-      <input type="hidden" name="subject" value="New Kelpify Website Subscriber">
-      <input type="hidden" name="from_name" value="Kelpify Agri Solutions">
-      <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" style="display:none;">
-      <button type="submit">Notify me</button>
-    </form>
-    <p class="form-note">No spam — just one email when we open the gates.</p>
-  </div>
-
-  <svg class="hero-divider" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true">
-    <path d="M0,50 C 240,90 480,10 720,50 C 960,90 1200,10 1440,50 L1440,90 L0,90 Z" fill="#F0F3EC"/>
-  </svg>
-</section>
-
-<section class="rows-section">
-  <div class="rows-head" style="text-align:center; margin-left:auto; margin-right:auto;">
-    <span class="eyebrow-tag">Why wait</span>
-    <h2>Built for soil. Backed by science.</h2>
-    <p style="margin-left:auto; margin-right:auto;">We're putting the finishing touches on something built specifically for farmers. Full details drop at launch — for now, just know it's coming, and it's worth the wait.</p>
-  </div>
-
-  <div class="rows-grid">
-    <div class="row-card" style="text-align:center;">
-      <div class="icon" aria-hidden="true" style="margin-left:auto; margin-right:auto;">
-        <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M12 22V10" stroke="#2E8F4E" stroke-width="2" stroke-linecap="round"/><path d="M12 10C12 10 5 10 5 3C12 3 12 10 12 10Z" fill="#8FCB4E"/><path d="M12 10C12 10 19 10 19 3C12 3 12 10 12 10Z" fill="#2E8F4E"/></svg>
+    <section class="why">
+      <div class="section-heading">
+        <span>WHY WAIT</span>
+        <h2>Built for soil.<br><em>Backed by science.</em></h2>
       </div>
-      <h3>Rooted in nature</h3>
-      <p>Everything we build starts with the health of the soil.</p>
-    </div>
 
-    <div class="row-card" style="text-align:center;">
-      <div class="icon" aria-hidden="true" style="margin-left:auto; margin-right:auto;">
-        <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M12 2C12 2 6 10 6 14.5C6 17.9 8.7 21 12 21C15.3 21 18 17.9 18 14.5C18 10 12 2 12 2Z" stroke="#2E96D6" stroke-width="2"/></svg>
+      <div class="cards">
+        <article class="card">
+          <div class="icon">01</div>
+          <h3>Regenerate</h3>
+          <p>Supporting healthier soil and stronger growing systems from the ground up.</p>
+        </article>
+
+        <article class="card">
+          <div class="icon">02</div>
+          <h3>Restore</h3>
+          <p>Nature-led solutions designed to work with the biology already present in soil.</p>
+        </article>
+
+        <article class="card">
+          <div class="icon">03</div>
+          <h3>Grow better</h3>
+          <p>Helping agriculture move toward resilient, productive and sustainable soils.</p>
+        </article>
       </div>
-      <h3>Made for Farmers</h3>
-      <p>Designed around the real need of 
-farmers.</p>
-    </div>
+    </section>
 
-    <div class="row-card" style="text-align:center;">
-      <div class="icon" aria-hidden="true" style="margin-left:auto; margin-right:auto;">
-        <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#1D6E5C" stroke-width="2"/><path d="M12 7V12L15 15" stroke="#1D6E5C" stroke-width="2" stroke-linecap="round"/></svg>
-      </div>
-      <h3>Coming soon</h3>
-      <p>We're almost ready. Leave your email and we'll do the rest.</p>
-    </div>
-  </div>
-</section>
+    <footer>
+      <span>© 2026 Kelpify Agri Solutions</span>
+      <span>Regenerating soil, naturally.</span>
+    </footer>
 
-<footer class="footer">
-  <div class="footer-top">
-    <h2>Be first to know when we <span class="grad-text">open the gates</span>.</h2>
-    <form class="signup" onsubmit="handleSignup(event)" style="margin-top:0;">
-      <input type="email" name="email" placeholder="you@example.com" required aria-label="Email address">
-      <input type="hidden" name="access_key" value="60b2cc7e-95ca-4caf-a449-bd62f727fa9e">
-      <input type="hidden" name="subject" value="New Kelpify Website Subscriber">
-      <input type="hidden" name="from_name" value="Kelpify Agri Solutions">
-      <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" style="display:none;">
-      <button type="submit">Notify me</button>
-    </form>
-  </div>
-  <div class="footer-bottom">
-    <div class="brand-name grad-text">Kelpify Agri Solutions</div>
-    <span>© 2026 KELPIFY AGRI SOLUTIONS.  All Rights Reserved.</span>
-  </div>
-</footer>
+  </main>
 
+  <script>
+    const form = document.getElementById("notifyForm");
+    const email = document.getElementById("email");
+    const button = document.getElementById("submitButton");
+    const responseBox = document.getElementById("response");
+    const successCard = document.getElementById("successCard");
+    const successEmail = document.getElementById("successEmail");
 
-<script>
-  async function handleSignup(event) {
-    event.preventDefault();
+    form.addEventListener("submit", async (event) => {
+      event.preventDefault();
 
-    const form = event.currentTarget;
-    const emailInput = form.querySelector('input[type="email"]');
-    const button = form.querySelector('button');
+      responseBox.textContent = "";
+      responseBox.className = "response";
+      successCard.classList.remove("show");
 
-    if (!emailInput || !emailInput.checkValidity()) {
-      if (emailInput) emailInput.reportValidity();
-      return;
-    }
-
-    const originalText = button ? button.textContent : 'Notify me';
-    let note = form.nextElementSibling;
-
-    if (!note || !note.classList.contains('form-note')) {
-      note = document.createElement('p');
-      note.className = 'form-note';
-      form.insertAdjacentElement('afterend', note);
-    }
-
-    if (button) {
-      button.disabled = true;
-      button.textContent = 'Sending...';
-    }
-    note.textContent = '';
-
-    try {
-      const response = await fetch('https://api.web3forms.com/submit', {
-        method: 'POST',
-        body: new FormData(form),
-        headers: { 'Accept': 'application/json' }
-      });
-
-      const data = await response.json();
-
-      if (data.success) {
-        note.textContent = 'Thank you! You’re on the list. We’ll let you know when Kelpify opens the gates.';
-        form.reset();
-        if (button) button.textContent = 'You’re on the list ✓';
-      } else {
-        throw new Error(data.message || 'Submission failed');
+      if (!email.checkValidity()) {
+        email.reportValidity();
+        return;
       }
-    } catch (error) {
-      console.error('Web3Forms error:', error);
-      note.textContent = 'Something went wrong. Please try again in a moment.';
-      if (button) button.textContent = originalText;
-    } finally {
-      if (button) button.disabled = false;
-    }
-  }
-</script>
 
+      const captchaResponse = form.querySelector(
+        'textarea[name="h-captcha-response"]'
+      );
+
+      if (!captchaResponse || !captchaResponse.value) {
+        responseBox.textContent = "Please complete the hCaptcha first.";
+        responseBox.className = "response error";
+        return;
+      }
+
+      button.disabled = true;
+      button.textContent = "Sending...";
+
+      try {
+        const apiResponse = await fetch(
+          "https://api.web3forms.com/submit",
+          {
+            method: "POST",
+            headers: {
+              "Accept": "application/json"
+            },
+            body: new FormData(form)
+          }
+        );
+
+        const result = await apiResponse.json();
+
+        console.log("Web3Forms Response:", result);
+
+        if (apiResponse.ok && result.success) {
+          responseBox.textContent =
+            result.message || "Thank you! Your submission has been received.";
+          responseBox.className = "response success";
+
+          successEmail.textContent = "Email submitted: " + email.value;
+          successCard.classList.add("show");
+
+          button.textContent = "Submitted ✓";
+          form.reset();
+
+          if (window.hcaptcha) {
+            try {
+              window.hcaptcha.reset();
+            } catch (e) {}
+          }
+
+          setTimeout(() => {
+            button.disabled = false;
+            button.textContent = "Notify me";
+          }, 3500);
+        } else {
+          responseBox.textContent =
+            result.message || "Submission failed. Please try again.";
+          responseBox.className = "response error";
+
+          button.disabled = false;
+          button.textContent = "Notify me";
+        }
+      } catch (error) {
+        console.error("Web3Forms Error:", error);
+
+        responseBox.textContent =
+          "Network error. Please check your internet connection and try again.";
+        responseBox.className = "response error";
+
+        button.disabled = false;
+        button.textContent = "Notify me";
+      }
+    });
+  </script>
 </body>
 </html>
